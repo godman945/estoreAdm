@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--  
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{thymeleaf_base_layout/base}">
+  -->
+<head>
+	<link rel="stylesheet" type="text/css" href="css/themes/default/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="css/themes/icon.css" />
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<script type="text/javascript" src="js/jquery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="js/easyui/easyui-lang-zh_CN.js"></script>
+	   
+      
+       	<!--開發版本-->
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<!--生產版本-->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="js/index/index.js"></script>
+	
+</head>
+
+<!-- 
+ <div layout:fragment="head_area">
+ 		取代原有head區塊	
+ </div>
+ -->
+ 
+
+ <!-- 
+	<div region="north" id="header" layout:fragment="head_area">
+			<img src="img/logo.png" class="logo" />
+			<div class="top-btns">
+				<span>welcome，Alex2</span>
+				<a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-lock'">修改密码</a>
+				<a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-clear'">退出系统</a>
+				<select class="easyui-combobox" data-options="editable:false">
+					<option value="0" selected="selected">中文</option>
+					<option value="1">English</option>
+				</select>
+			</div>
+		</div>
+ -->
+
+
+
+
+
+
+
+
+
+<!-- 
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:insert="~{thymeleaf_base_layout/base::common_header}">
+    <meta charset="UTF-8">
+    <title>ADM</title>
+</div>
+ 
+ -->
+<body>
+		<!-- 
+	  <div id="app2">
+            <div v-for="i in 9">
+              <h3>{{ i }}</h3>
+              <div v-for="j in 9">{{ i }} x {{ j }}={{ i*j }}</div>
+            </div>
+      </div>
+       -->
+       
+      <div id="app3" >
+		   <ul>  
+			    <li v-for="(value, index) in message">
+			     	{{index}} : {{value}}
+			    </li>
+		  </ul>
+      </div>
+      
+  	<div id="gender">
+	    <select id="ALEX" v-model="selectName" >
+	        <option v-for="list in lists" :value="list.item" ref="comp_option">{{list.item}}</option>
+	    </select>
+	    <div>選擇的性別是:{{selectName}}</div>
+	</div>
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	<div id="app">
+	    <!-- head 區塊 -->
+		<div region="north" id="header" layout:fragment="head_area">
+			<img src="img/logo.png" class="logo" />
+			<div class="top-btns">
+				<span>welcome2，Alex2</span>
+				<a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-lock'">修改密码</a>
+				<a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-clear'">退出系统</a>
+				
+				<!--  -->
+				<select id="language_select" class="easyui-combobox" data-options="editable:false" >
+					<option value="0" selected="selected">中文</option>
+					<option value="1">English</option>
+				</select>
+				
+				 
+				 
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	<div id="firstVue">
+	    {{content}}
+	</div>
+	
+	<!--  
+<script>
+let firstVueObj = new Vue({
+    el:'#firstVue',
+    data:{
+        content:'Hello!world!',
+    },
+})
+</script>
+	-->
+    <!--引入模板片段
+    <div th:insert="~{thymeleaf_base_layout/base::copy}"></div>
+    -->
+    
+
+</body>
+
+</html>
